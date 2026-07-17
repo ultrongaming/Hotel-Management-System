@@ -56,7 +56,7 @@ pip install -r requirements.txt
 4. Run the project:
 
 ```bash
-python hotel.py
+python app.py
 ```
 
 ## Database
