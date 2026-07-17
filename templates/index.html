@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid py-5">
+    <!-- Header Section -->
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold text-primary">Welcome to EliteStay</h1>
+            <p class="lead text-muted">Professional Hotel Management System</p>
+        </div>
+    </div>
+
+    <!-- Dashboard Stats -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-3">
+            <div class="stat-card shadow-sm">
+                <div class="stat-icon bg-primary">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                <div class="stat-content">
+                    <h5 class="stat-label">Total Customers</h5>
+                    <p class="stat-value">{{ total_customers }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card shadow-sm">
+                <div class="stat-icon bg-success">
+                    <i class="bi bi-door-closed"></i>
+                </div>
+                <div class="stat-content">
+                    <h5 class="stat-label">Total Rooms</h5>
+                    <p class="stat-value">{{ total_rooms }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card shadow-sm">
+                <div class="stat-icon bg-info">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <div class="stat-content">
+                    <h5 class="stat-label">Available Rooms</h5>
+                    <p class="stat-value">{{ available_rooms }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card shadow-sm">
+                <div class="stat-icon bg-warning">
+                    <i class="bi bi-calendar-check"></i>
+                </div>
+                <div class="stat-content">
+                    <h5 class="stat-label">Active Bookings</h5>
+                    <p class="stat-value">{{ active_bookings }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-4">Quick Actions</h3>
+            <div class="d-flex gap-3 flex-wrap">
+                <a href="/customers" class="btn btn-lg btn-primary">
+                    <i class="bi bi-person-plus"></i> Manage Customers
+                </a>
+                <a href="/rooms" class="btn btn-lg btn-success">
+                    <i class="bi bi-door-closed"></i> Manage Rooms
+                </a>
+                <a href="/bookings" class="btn btn-lg btn-info">
+                    <i class="bi bi-calendar3"></i> View Bookings
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
